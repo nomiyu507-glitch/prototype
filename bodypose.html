@@ -11,9 +11,15 @@
   </head>
   <body class="sketch-page">
     <div class="toolbar">
-      <a href="index.html">Back to index</a>
+      <a href="index.html">Back</a>
       <p>BodyPose: webcam + skeleton + particles</p>
     </div>
+    <section class="demo-notes">
+      <h1>BodyPose Demo</h1>
+      <p><strong>怎么用 How to use:</strong> 打开页面并允许摄像头权限，站到画面前活动身体。页面会在你身上画出骨架线、关键点圆点，并从手腕和鼻子位置发射粒子。 Open the page, allow camera access, and move your body in front of the screen. The sketch draws a body skeleton, keypoint dots, and particles coming from your wrists and nose.</p>
+      <p><strong>建议修改 Try changing first:</strong> 先改 <code>TARGET_KEYPOINTS</code>，决定哪些身体部位触发效果；再改粒子的颜色、数量和大小，就能快速做出自己的版本。 Start with <code>TARGET_KEYPOINTS</code> to choose which body parts trigger the effect, then adjust particle color, amount, and size.</p>
+      <p><strong>原理 Principle:</strong> 这个 demo 用 <code>ml5.bodyPose()</code> 识别人体关键点的位置，比如鼻子、手腕、肩膀和膝盖。程序先把关键点连成骨架，再读取选中的关键点坐标，把它们当成粒子的发射位置。 This demo uses <code>ml5.bodyPose()</code> to detect body keypoints such as the nose, wrists, shoulders, and knees. The program connects them into a skeleton and uses selected keypoint positions as particle emitters.</p>
+    </section>
     <script src="examples/bodypose.js"></script>
   </body>
 </html>

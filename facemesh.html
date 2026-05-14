@@ -10,9 +10,15 @@
   </head>
   <body class="sketch-page">
     <div class="toolbar">
-      <a href="index.html">Back to index</a>
+      <a href="index.html">Back</a>
       <p>FaceMesh: expression to particles</p>
     </div>
+    <section class="demo-notes">
+      <h1>FaceMesh Demo</h1>
+      <p><strong>怎么用 How to use:</strong> 面对摄像头做表情，比如张嘴、闭嘴、微笑。你会看到鼻子附近不断喷出粒子，而且粒子的数量和颜色会随着表情变化。 Face the camera and make expressions such as opening your mouth, closing it, or smiling. Particles will emit near the nose, and their amount and color will respond to your expression.</p>
+      <p><strong>建议修改  Try changing first:</strong> 先改 <code>emitCount</code> 和 <code>particleHue</code> 的映射，再尝试把粒子改成文字、线条或其他图形。 Start by editing <code>emitCount</code> and <code>particleHue</code>, then try replacing particles with text, lines, or other shapes.</p>
+      <p><strong>原理 Principle:</strong> 这个 demo 用 <code>ml5.faceMesh()</code> 追踪脸上的许多关键点。程序读取上下嘴唇之间的距离来判断嘴巴张开程度，再读取左右嘴角之间的距离来判断微笑程度，最后把这些数值映射成粒子的数量和色相。 This demo uses <code>ml5.faceMesh()</code> to track many facial keypoints. It measures mouth opening from the lips and smile strength from the mouth corners, then maps those values to particle count and hue.</p>
+    </section>
     <script src="examples/facemesh.js"></script>
   </body>
 </html>

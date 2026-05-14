@@ -10,9 +10,15 @@
   </head>
   <body class="sketch-page">
     <div class="toolbar">
-      <a href="index.html">Back to index</a>
+      <a href="index.html">Back</a>
       <p>ImageClassifier: poetic subtitle overlay</p>
     </div>
+    <section class="demo-notes">
+      <h1>ImageClassifier Demo</h1>
+      <p><strong>怎么用 How to use:</strong> 把不同物体放到摄像头前，比如杯子、手机、书、本子。页面下方会持续显示 AI 对当前画面的分类标签和置信度。 Show different objects to the camera, such as a cup, phone, book, or notebook. The page will keep displaying the AI's current label and confidence score.</p>
+      <p><strong>建议修改  Try changing first:</strong> 先改字幕的语言和风格。可以直接显示英文标签，也可以把它改成中文诗句、讽刺性文字或自己的概念文本。 Start by changing the subtitle language and visual tone. You can keep the raw English label or rewrite it as Chinese poetry, satire, or your own conceptual text.</p>
+      <p><strong>原理 Principle:</strong> 这个 demo 用 <code>ml5.imageClassifier()</code> 调用预训练分类模型。模型会定期读取摄像头画面，输出“它认为看到了什么”，程序再把这个结果变成字幕式文本叠加到视频上。 This demo uses <code>ml5.imageClassifier()</code> with a pretrained image model. The model periodically reads the camera image, predicts what it sees, and the program turns that result into subtitle-like text on the video.</p>
+    </section>
     <script src="examples/classifier.js"></script>
   </body>
 </html>

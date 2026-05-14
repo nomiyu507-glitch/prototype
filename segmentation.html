@@ -11,9 +11,15 @@
   </head>
   <body class="sketch-page">
     <div class="toolbar">
-      <a href="index.html">Back to index</a>
+      <a href="index.html">Back</a>
       <p>BodySegmentation: background compositing</p>
     </div>
+    <section class="demo-notes">
+      <h1>BodySegmentation Demo</h1>
+      <p><strong>怎么用 How to use:</strong> 站到摄像头前，程序会把人物从原背景里抠出来，再贴到新的背景上。这个示例很适合做换背景、舞台合成、人物进入虚拟空间之类的作品。 Stand in front of the camera and the program will cut the person out from the original background and place them onto a new one. This is useful for background replacement, stage compositing, or virtual-space scenes.</p>
+      <p><strong>建议修改 Try changing first:</strong> 先替换 <code>assets/background.jpg</code>，再改字幕文本；如果想继续深入，可以把背景换成视频、噪声动画或自己画的动态图形。 Start by replacing <code>assets/background.jpg</code> and editing the subtitle text. Then try video backgrounds, noise animation, or your own generative graphics.</p>
+      <p><strong>原理 Principle:</strong> 这个 demo 用 <code>ml5.bodySegmentation()</code> 生成一张人体遮罩。遮罩会告诉程序哪里是人、哪里是背景。程序先画新的背景，再利用遮罩只保留人物区域，最后把人物叠加回画面中。 This demo uses <code>ml5.bodySegmentation()</code> to generate a human mask. The mask tells the program which parts are person and which parts are background, so it can draw a new background first and then composite the person back on top.</p>
+    </section>
     <script src="examples/segmentation.js"></script>
   </body>
 </html>

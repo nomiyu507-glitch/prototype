@@ -10,9 +10,15 @@
   </head>
   <body class="sketch-page">
     <div class="toolbar">
-      <a href="index.html">Back to index</a>
+      <a href="index.html">Back</a>
       <p>HandPose: finger angle + pinch mapping</p>
     </div>
+    <section class="demo-notes">
+      <h1>HandPose Demo</h1>
+      <p><strong>怎么用 How to use:</strong> 把手伸到摄像头前，尝试弯曲食指，或者让拇指和食指靠近、分开。你会看到圆环大小、颜色和旋转状态随着手势变化。 Put your hand in front of the camera, bend your index finger, or move your thumb and index finger closer together and apart. The ring size, color, and rotation will change with your gesture.</p>
+      <p><strong>建议修改  Try changing first:</strong> 先改 <code>size</code> 和 <code>hue</code> 这两行映射关系，最容易理解“动作数据是怎么变成视觉效果的”。 Start by changing the <code>size</code> and <code>hue</code> mappings to see how motion data becomes visual change.</p>
+      <p><strong>原理 Principle:</strong> 这个 demo 用 <code>ml5.handPose()</code> 识别手部关键点。程序重点读取两种数据：食指关节角度，以及拇指和食指之间的距离，再把它们映射成图形的大小、颜色和角度。 This demo uses <code>ml5.handPose()</code> to detect hand keypoints. It mainly reads the index finger joint angle and the distance between the thumb and index finger, then maps them to size, color, and rotation.</p>
+    </section>
     <script src="examples/handpose.js"></script>
   </body>
 </html>

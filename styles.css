@@ -89,6 +89,25 @@ body {
   padding: 20px;
 }
 
+/* Toolbar first, then any p5 / capture output (webcam + controls), then long-form notes. */
+.sketch-page > .toolbar {
+  order: 1;
+}
+
+.sketch-page > *:not(.toolbar):not(.demo-notes) {
+  order: 2;
+}
+
+.sketch-page > .demo-notes {
+  order: 3;
+}
+
+.sketch-page > main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .toolbar {
   width: min(100%, 880px);
   display: flex;
@@ -106,6 +125,30 @@ body {
 
 .toolbar p {
   margin: 0;
+}
+
+.demo-notes {
+  width: min(100%, 880px);
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: rgba(17, 23, 36, 0.82);
+  border: 1px solid rgba(173, 198, 255, 0.14);
+  color: #dbe7ff;
+}
+
+.demo-notes h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.demo-notes p {
+  margin: 8px 0;
+  line-height: 1.65;
+  color: #c2d2f1;
+}
+
+.demo-notes strong {
+  color: #f3f7ff;
 }
 
 canvas {
