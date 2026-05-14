@@ -17,8 +17,17 @@
     <section class="demo-notes">
       <h1>BodyPose Demo</h1>
       <p><strong>怎么用 How to use:</strong> 打开页面并允许摄像头权限，站到画面前活动身体。页面会在你身上画出骨架线、关键点圆点，并从手腕和鼻子位置发射粒子。 Open the page, allow camera access, and move your body in front of the screen. The sketch draws a body skeleton, keypoint dots, and particles coming from your wrists and nose.</p>
+      <p class="demo-notes__lang" lang="ko">
+        <strong>사용법:</strong> 페이지를 연 뒤 카메라 권한을 허용하고, 화면 앞에서 몸을 움직이세요. 몸 위에 뼈대 선과 관절 점이 그려지고 손목과 코 위치에서 입자가 발사됩니다.
+      </p>
       <p><strong>建议修改 Try changing first:</strong> 先改 <code>TARGET_KEYPOINTS</code>，决定哪些身体部位触发效果；再改粒子的颜色、数量和大小，就能快速做出自己的版本。 Start with <code>TARGET_KEYPOINTS</code> to choose which body parts trigger the effect, then adjust particle color, amount, and size.</p>
+      <p class="demo-notes__lang" lang="ko">
+        <strong>먼저 바꿔 볼 것:</strong> 먼저 <code>TARGET_KEYPOINTS</code>를 수정해 어떤 신체 부위가 효과를 일으킬지 정한 다음, 입자 색·개수·크기를 조정하면 자신만의 버전을 빠르게 만들 수 있습니다.
+      </p>
       <p><strong>原理 Principle:</strong> 这个 demo 用 <code>ml5.bodyPose()</code> 识别人体关键点的位置，比如鼻子、手腕、肩膀和膝盖。程序先把关键点连成骨架，再读取选中的关键点坐标，把它们当成粒子的发射位置。 This demo uses <code>ml5.bodyPose()</code> to detect body keypoints such as the nose, wrists, shoulders, and knees. The program connects them into a skeleton and uses selected keypoint positions as particle emitters.</p>
+      <p class="demo-notes__lang" lang="ko">
+        <strong>원리:</strong> 이 데모는 <code>ml5.bodyPose()</code>로 코·손목·어깨·무릎 같은 신체 관절 위치를 찾습니다. 관절을 뼈대로 연결한 뒤, 선택한 좌표를 입자가 나오는 위치로 사용합니다.
+      </p>
     </section>
     <script src="examples/bodypose.js"></script>
   </body>

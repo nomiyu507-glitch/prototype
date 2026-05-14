@@ -16,8 +16,17 @@
     <section class="demo-notes">
       <h1>FaceMesh Demo</h1>
       <p><strong>怎么用 How to use:</strong> 面对摄像头做表情，比如张嘴、闭嘴、微笑。你会看到鼻子附近不断喷出粒子，而且粒子的数量和颜色会随着表情变化。 Face the camera and make expressions such as opening your mouth, closing it, or smiling. Particles will emit near the nose, and their amount and color will respond to your expression.</p>
+      <p class="demo-notes__lang" lang="ko">
+        <strong>사용법:</strong> 카메라를 보며 입을 벌리거나 다물거나 미소를 지어 보세요. 코 근처에서 입자가 뿜어져 나오고, 입자 개수와 색이 표정에 따라 달라집니다.
+      </p>
       <p><strong>建议修改  Try changing first:</strong> 先改 <code>emitCount</code> 和 <code>particleHue</code> 的映射，再尝试把粒子改成文字、线条或其他图形。 Start by editing <code>emitCount</code> and <code>particleHue</code>, then try replacing particles with text, lines, or other shapes.</p>
+      <p class="demo-notes__lang" lang="ko">
+        <strong>먼저 바꿔 볼 것:</strong> 먼저 <code>emitCount</code>와 <code>particleHue</code> 매핑을 수정한 뒤, 입자를 글자·선·다른 도형으로 바꿔 보세요.
+      </p>
       <p><strong>原理 Principle:</strong> 这个 demo 用 <code>ml5.faceMesh()</code> 追踪脸上的许多关键点。程序读取上下嘴唇之间的距离来判断嘴巴张开程度，再读取左右嘴角之间的距离来判断微笑程度，最后把这些数值映射成粒子的数量和色相。 This demo uses <code>ml5.faceMesh()</code> to track many facial keypoints. It measures mouth opening from the lips and smile strength from the mouth corners, then maps those values to particle count and hue.</p>
+      <p class="demo-notes__lang" lang="ko">
+        <strong>원리:</strong> 이 데모는 <code>ml5.faceMesh()</code>로 얼굴의 많은 점을 추적합니다. 윗입술과 아랫입술 사이 거리로 입 벌림 정도를, 양쪽 입꼬리 사이 거리로 미소 정도를 잰 뒤, 그 값을 입자 개수와 색상(색상환)에 매핑합니다.
+      </p>
     </section>
     <script src="examples/facemesh.js"></script>
   </body>

@@ -151,6 +151,19 @@ body {
   color: #f3f7ff;
 }
 
+.demo-notes p.demo-notes__lang {
+  margin: 0 0 16px;
+  padding: 10px 0 0;
+  border-top: 1px solid rgba(173, 198, 255, 0.12);
+  font-size: 0.96em;
+  color: #c8d6f5;
+  line-height: 1.65;
+}
+
+.demo-notes p.demo-notes__lang:last-child {
+  margin-bottom: 0;
+}
+
 canvas {
   max-width: 100%;
   height: auto !important;

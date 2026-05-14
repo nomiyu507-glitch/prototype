@@ -16,8 +16,17 @@
     <section class="demo-notes">
       <h1>HandPose Demo</h1>
       <p><strong>怎么用 How to use:</strong> 把手伸到摄像头前，尝试弯曲食指，或者让拇指和食指靠近、分开。你会看到圆环大小、颜色和旋转状态随着手势变化。 Put your hand in front of the camera, bend your index finger, or move your thumb and index finger closer together and apart. The ring size, color, and rotation will change with your gesture.</p>
+      <p class="demo-notes__lang" lang="ko">
+        <strong>사용법:</strong> 손을 카메라 앞에 두고 검지를 구부리거나, 엄지와 검지를 가깝게 붙였다 멀리했다 해 보세요. 링의 크기·색·회전이 손동작에 따라 달라집니다.
+      </p>
       <p><strong>建议修改  Try changing first:</strong> 先改 <code>size</code> 和 <code>hue</code> 这两行映射关系，最容易理解“动作数据是怎么变成视觉效果的”。 Start by changing the <code>size</code> and <code>hue</code> mappings to see how motion data becomes visual change.</p>
+      <p class="demo-notes__lang" lang="ko">
+        <strong>먼저 바꿔 볼 것:</strong> 먼저 <code>size</code>와 <code>hue</code> 매핑 두 줄을 바꿔 보세요. 동작 데이터가 어떻게 화면으로 바뀌는지 가장 쉽게 느낄 수 있습니다.
+      </p>
       <p><strong>原理 Principle:</strong> 这个 demo 用 <code>ml5.handPose()</code> 识别手部关键点。程序重点读取两种数据：食指关节角度，以及拇指和食指之间的距离，再把它们映射成图形的大小、颜色和角度。 This demo uses <code>ml5.handPose()</code> to detect hand keypoints. It mainly reads the index finger joint angle and the distance between the thumb and index finger, then maps them to size, color, and rotation.</p>
+      <p class="demo-notes__lang" lang="ko">
+        <strong>원리:</strong> 이 데모는 <code>ml5.handPose()</code>로 손 관절을 인식합니다. 검지 관절 각도와 엄지·검지 사이 거리를 읽어 도형의 크기·색·회전 각에 매핑합니다.
+      </p>
     </section>
     <script src="examples/handpose.js"></script>
   </body>
